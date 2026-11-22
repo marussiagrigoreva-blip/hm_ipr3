@@ -4,6 +4,4 @@ __pycache__/
 *.py[cod]
 *.db
 backup/
-scripts/
-README.md
 APP-README.md
