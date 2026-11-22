@@ -38,4 +38,28 @@ docker compose up -d
 curl.exe http://localhost:8080/
 <img width="967" height="38" alt="image" src="https://github.com/user-attachments/assets/c7710193-ab4a-4fde-bc96-df76ab23c4f3" />
 
+docker compose stop redis
+<img width="692" height="72" alt="image" src="https://github.com/user-attachments/assets/445bf436-67c1-41a7-8b93-2e1c4c87cf0a" />
+
+curl.exe http://localhost:8080/healthz
+<img width="441" height="47" alt="image" src="https://github.com/user-attachments/assets/49f9bc7b-d5d5-4584-85e3-1bc891a211f0" />
+
+curl.exe http://localhost:8080/readyz
+<img width="508" height="44" alt="image" src="https://github.com/user-attachments/assets/c1ba1f13-537f-4a60-95ba-b3bca2359bed" />
+
+curl.exe -X POST http://localhost:8080/increment
+<img width="692" height="43" alt="image" src="https://github.com/user-attachments/assets/7d23abc2-23df-4309-ad40-b42ae0621ff9" />
+
+При остановленном Redis: /healthz вернул HTTP 200, /readyz и POST /increment — HTTP 503.
+
+docker compose start redis
+
+curl.exe http://localhost:8080/
+{"greeting": "Hello from Docker!", "count": 7, "hostname": "b476d558eee9", "storage": "redis"}
+
+curl.exe -X POST http://localhost:8080/increment
+{"greeting": "Hello from Docker!", "count": 8, "hostname": "b476d558eee9", "storage": "redis"}
+
+После запуска Redis GET / вернул count: 7, следующий POST /increment — count: 8.
+
 
