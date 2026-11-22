@@ -18,3 +18,9 @@
 - тестовые контейнеры, сеть и volume удалены.
 
 Команда для обоих запусков: `APP_PORT=18081 bash scripts/check.sh`.
+
+APP_PORT=18081 bash scripts/check.sh
+<img width="989" height="125" alt="image" src="https://github.com/user-attachments/assets/8433b3d1-10fe-47c2-821f-1ebdbe72f719" />
+
+APP_PORT=18081 bash scripts/check.sh
+<img width="521" height="131" alt="image" src="https://github.com/user-attachments/assets/24b63069-ac17-47f6-81cf-18cef1732e20" />
