@@ -27,6 +27,7 @@ APP_PORT=18081 bash scripts/check.sh
 
 
 отчет для отдельного хранилища
+
 docker compose down
 <img width="1010" height="76" alt="image" src="https://github.com/user-attachments/assets/997f882b-d400-4122-a3b7-bfd19813515d" />
 
