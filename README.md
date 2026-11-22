@@ -3,25 +3,30 @@
 
 Shell
 cp .env.example .env
+
 Переменные окружения:
-Переменная Описание Значение по умолчанию
-GREETING Приветствие приложения Hello from Docker!
-APP_PORT Порт приложения на компьютере 8080
+Переменная 
+Описание 
+Значение по умолчанию
+GREETING: Приветствие приложения Hello from Docker!
+APP_PORT: Порт приложения на компьютере 8080
 Запуск
 Сборка образа и запуск контейнеров:
 
-Shell
 docker compose up -d --build
+
 Проверка состояния сервисов:
 
 docker compose ps
+
 Просмотр логов приложения:
 
-Shell
 docker compose logs app
+
 Приложение доступно по адресу:
 
 http://localhost:8080
+
 API
 Метод Адрес Описание
 GET / Получить приветствие и текущее значение счётчика
@@ -30,11 +35,11 @@ GET /healthz Проверить, что приложение работает
 GET /readyz Проверить готовность приложения и доступность хранилища
 Примеры запросов:
 
-Shell
 curl http://localhost:8080/
 curl -X POST http://localhost:8080/increment
 curl http://localhost:8080/healthz
 curl http://localhost:8080/readyz
+
 Хранение данных
 Приложение использует Redis (STORAGE=redis).
 Redis сохраняет данные в именованный Docker volume redis_data, подключённый к /data. Включено сохранение данных Redis на диск.
@@ -45,25 +50,26 @@ docker compose down
 docker compose up -d
 Проверить сохранённое значение:
 
-Shell
 curl http://localhost:8080/
 Важно: для проверки сохранения данных не использовать docker compose down -v, так как эта команда удаляет именованные volumes.
 Проверка восстановления Redis
+
 Остановить Redis:
 
-Shell
 docker compose stop redis
+
 Проверить состояние приложения:
 
-Shell
 curl -i http://localhost:8080/healthz
 curl -i http://localhost:8080/readyz
 curl -i -X POST http://localhost:8080/increment
+
 Запустить Redis обратно:
 
-Shell
 docker compose start redis
+
 После восстановления Redis приложение должно снова обрабатывать запросы без ручного перезапуска.
+
 Ограничения приложения
 Для контейнера приложения настроены:
 непривилегированный пользователь с UID 10001;
@@ -73,7 +79,6 @@ docker compose start redis
 Автоматическая проверка
 Запуск проверки:
 
-Shell
 ./scripts/check.sh
 Скрипт проверяет работу счётчика, сохранение данных, восстановление после остановки Redis и создание резервной копии.
 Остановка
