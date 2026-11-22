@@ -24,3 +24,14 @@ APP_PORT=18081 bash scripts/check.sh
 
 APP_PORT=18081 bash scripts/check.sh
 <img width="521" height="131" alt="image" src="https://github.com/user-attachments/assets/24b63069-ac17-47f6-81cf-18cef1732e20" />
+
+
+отчет для отдельного хранилища
+docker compose down
+docker compose up -d
+curl.exe http://localhost:8080/
+<img width="1010" height="76" alt="image" src="https://github.com/user-attachments/assets/997f882b-d400-4122-a3b7-bfd19813515d" />
+<img width="996" height="84" alt="image" src="https://github.com/user-attachments/assets/0882d50d-2765-4a8a-954a-08254590d6fb" />
+<img width="967" height="38" alt="image" src="https://github.com/user-attachments/assets/c7710193-ab4a-4fde-bc96-df76ab23c4f3" />
+
+
