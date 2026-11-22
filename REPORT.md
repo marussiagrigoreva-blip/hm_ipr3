@@ -9,7 +9,9 @@
 
 Автоматический сценарий `scripts/check.sh` добавлен. Два успешных запуска подряд ещё нужно выполнить и записать здесь результаты; этот пункт не заявляется как проверенный.
 
-mariia_grigoreva@LAPTOP-M5PK6OK9:/mnt/c/Users/bobrd/Documents/Codex/2026-11-18/skip-to-content-navigation-menu-nikfilk20[+] Building 4.6s (12/12) FINISHED
+1 проверка
+команда: APP_PORT=18081 bash scripts/check.sh
+[+] Building 4.6s (12/12) FINISHED
  => [internal] load local bake definitions                                                                         0.0s
  => => reading from stdin 648B                                                                                     0.0s0
  => [internal] load build definition from Dockerfile                                                               0.1s
@@ -68,8 +70,12 @@ STEP: cleanup
  ✔ Container dhwcheck17953595133647-redis-1 Removed                                                                 0.3s
  ✔ Volume dhwcheck17953595133647_redis_data Removed                                                                 0.1s
  ✔ Network dhwcheck17953595133647_default   Removed                                                                 0.3s
-PASS: test containers, network, and volume removed
-mariia_grigoreva@LAPTOP-M5PK6OK9:/mnt/c/Users/bobrd/Documents/Codex/2026-11-18/skip-to-content-navigation-menu-nikfilk20[+] Building 4.4s (12/12) FINISHED
+вывод: PASS: test containers, network, and volume removed
+
+
+2 проверка
+команда: APP_PORT=18081 bash scripts/check.sh
+[+] Building 4.4s (12/12) FINISHED
  => [internal] load local bake definitions                                                                         0.0s
  => => reading from stdin 648B                                                                                     0.0s
  => [internal] load build definition from Dockerfile                                                               0.1s
@@ -125,4 +131,4 @@ STEP: cleanup
  ✔ Container dhwcheck17953596024006-redis-1 Removed                                                                 0.2s
  ✔ Volume dhwcheck17953596024006_redis_data Removed                                                                 0.0s
  ✔ Network dhwcheck17953596024006_default   Removed                                                                 0.3s
-PASS: test containers, network, and volume removed
+вывод: PASS: test containers, network, and volume removed
